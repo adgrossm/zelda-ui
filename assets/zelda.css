@@ -24,15 +24,59 @@ top: 0;
 right: 0;
 bottom: 0;
 left: 0;
-border: 5px solid red;
+/* border: 5px solid red; */
 display: grid;
-grid-template-columns:1fr 1fr ;
+grid-template-columns:550px 1fr ;
 grid-template-rows: 86px 1fr 58px;
 }
 
 .top {
  background-color: purple;
  grid-column-end: span 2;
+ color: #ffff;
+ display: grid;
+ grid-template-columns: 228px 1fr 150px 1fr 228px;
+}
+
+.hearts {
+    background: yellow;
+    padding-top:24px ;
+    padding-left: 47px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start ;
+}
+.heart {
+    background: red;
+    width: 15px;
+    height: 12px;
+    margin-bottom: 4px;
+    margin-right: 1.4px;
+}
+
+.left-button {
+    align-self: end;
+    justify-self: end;
+    margin-bottom: 16px;
+    margin-right:12px ;
+}
+
+.right-button {
+    align-self: end;
+    margin-bottom: 16px;
+    margin-left: 20px;
+}
+
+.rupees {
+    align-self: center;
+    justify-self: end;
+    margin-right: 62px;
+}
+
+.location {
+    align-self: center;
+    margin-left: 29px;
 }
 
 .left {
@@ -40,14 +84,109 @@ background-color: green;
 
 }
 
-.right {
-background-color: orange;
+.inventory-nav {
+    background: limegreen;
+    height: 80px;
+    
+}
+
+.title {
+    text-align: center;
+    color: #ffff;
+    background: green;
+    height: 30px;
+    padding-left: 30px;
+    padding-top: 8px;
+}
+
+.links {
+padding-left: 120px;
+padding-top: 12px;
+padding-right: 93px;
+display: flex;
+justify-content: space-between;
 
 }
 
+.link{
+background: #fff;
+width: 28px;
+height: 24px;
+display: inline-block;
 
+}
+.right {
+background-color: orange;
+display: grid;
+position: relative;
+grid-template-rows: 155px 1fr 180px;
+grid-template-areas: 
+"conditions"
+"none"
+"stats";
+}
 
 .bottom {
-background-color: blue ;
+background: black ;
 grid-column-end: span 2 ;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding-right: 70px;
+
+
+}
+
+.action {
+    background: #ccc;
+    display: inline-block;
+    height: 20px;
+    width: 85px;
+
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(5, 72px);
+    grid-template-rows: repeat(4, 72px);
+    padding-left: 85px;
+    padding-top: 16px;
+    grid-gap: 10px;
+}
+
+.item {
+    background: black;
+}
+
+.preview {
+    background: orange;
+    background-image: url(./img/link-preview.png) ;
+    background-repeat: none;
+    background-size: cover;
+position: absolute;
+top: 0px;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
+.conditions {
+    background: lightcoral;
+}
+
+.stats {
+    background: red;
+    grid-area: stats;
+    margin: 10px;
+    border: 1px solid #ffff;
+    padding: 12px 20px;
+    margin-bottom: 40px;
+    color: #ffff;
+    z-index: 5;
+}
+
+.info {
+    height: 30px;
+    background: orange;
+
 }
